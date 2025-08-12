@@ -43,7 +43,7 @@ O Princípio de Demeter - Princípio do Menor Conhecimento - (Principle of Least
 - de atributos da classe do método (caso 4)
 Limitar o objeto a atributos locais, evitando variáveis globais. 
 
-L - Liskov Substitution Principle () - 
+L - Liskov Substitution Principle (Princípio de Substituição de Liskov) - Respeitar a assinatura do pai, trocar um filho pelo outro mantém a funcionalidade do código. 
 
 I - Interface Segregation Principle - (Princípio da Segregação de Interfaces) - a comunicação entre duas classes não deve ser feita diretamente, o ideal é essa comunicação de classe A e classe B é ser feita por uma interface;
 
@@ -54,8 +54,12 @@ M - Model (Representação dos dados)
 V - HTML (interface/ tela)
 C - Controlador (controlar a tela / ações dos botões)
 
-
 11/08/2025
+Continuação SOLID
+
+12/08/2025
+Continuação SOLID
+
 
    
 
