@@ -30,66 +30,32 @@ class A {
 
 Solid - 5 conceitos
 Usar a orientação a objeto do jeito mais correto possível
-S - Single Responsibility Principle (principio de responsabilidade única) - toda classe deve ter uma única responsabilidade.
-O - Open/Closed Principle (Princípio da Segregação de Interfaces) - a comunicação entre duas classes não deve ser feita diretamente, o ideal é essa comunicação de classe A e classe B é ser feita por uma interface
+S - Single Responsibility Principle (principio de responsabilidade única) - toda classe deve ter uma única responsabilidade;
+
+O - Open/Closed Principle (Princípio Aberto/Fechado) - uma classe deve estar fechada para modificações e aberta para extensões.
+
+Prefira Composição a Herança - Evitar o útilizo de heranças, priorizar o utilizado de composição. Utilizar herança em casos de divisão. (Ex: gato <= animal => cachorro), o gato é um animal, mas nunca será um cachorro, mesma coisa o cachorro, o mesmo é um animal, mas nunca será um gato. "Herança expõe para subclasses detalhes de implementação das classes pai. Logo, frequentemente diz-se que herança viola o encapsulamento das classes pai."
+
+O Princípio de Demeter - Princípio do Menor Conhecimento - (Principle of Least Knowledge) — defende que a implementação de um método deve invocar apenas os seguintes outros métodos:
+- de sua própria classe (caso 1)
+- de objetos passados como parâmetros (caso 2)
+- de objetos criados pelo próprio método (caso 3)
+- de atributos da classe do método (caso 4)
+Limitar o objeto a atributos locais, evitando variáveis globais. 
+
 L - Liskov Substitution Principle () - 
-I - Interface Segregation Principle
-D - Dependency Inversion Principle
+
+I - Interface Segregation Principle - (Princípio da Segregação de Interfaces) - a comunicação entre duas classes não deve ser feita diretamente, o ideal é essa comunicação de classe A e classe B é ser feita por uma interface;
+
+D - Dependency Inversion Principle - (Principio de inversão de dependencia) - uma classe deve estabelecer dependências prioritariamente com abstrações e não com implementações concretas. (Controller => <<interface>> => Service). Não depende diretamente de uma classe e sim de uma interface 
 
 MVC
 M - Model (Representação dos dados)
 V - HTML (interface/ tela)
 C - Controlador (controlar a tela / ações dos botões)
 
-package br.univille;
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
+11/08/2025
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseMotionListener;
-
-public class Janelinha extends JFrame 
-            implements ActionListener, MouseMotionListener{
-
-    private JButton botaozinho;
-
-    public Janelinha() {
-        setTitle("Eu nao acredito");
-        setSize(500,500);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        botaozinho = new JButton("ME CLICA");
-        botaozinho.addActionListener(this);
-        botaozinho.addMouseMotionListener(this);
-        add(botaozinho);
-
-        setVisible(true);
-    }
-    public static void main(String[] args) {
-        new Janelinha();
-    }
-
-    private void meClica(){
-        JOptionPane.showMessageDialog(null, "NAO ACREDITO");
-    }
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        meClica();
-    }
-    @Override
-    public void mouseDragged(MouseEvent e) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'mouseDragged'");
-    }
-    @Override
-    public void mouseMoved(MouseEvent e) {
-        System.out.println("passou...");
-    }
-
-
-}
+   
 
