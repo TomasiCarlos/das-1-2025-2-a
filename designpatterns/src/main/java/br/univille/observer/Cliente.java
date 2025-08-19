@@ -1,6 +1,5 @@
 package br.univille.observer;
 
-public class observer {
-    
+public class Cliente {
 
 }
