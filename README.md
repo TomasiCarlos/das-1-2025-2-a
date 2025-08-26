@@ -60,6 +60,33 @@ Continuação SOLID
 12/08/2025
 Continuação SOLID
 
-
+26/08/2025
+Fundamentos da Arquitetura de Software
    
+- Caracteristicas da Arquitetura
+   Disponibilidade - estar online por um tempo definido
+   Confiabiliade - o sistema faz o que deve ser feito
+   Segurança - quão seguro o sistema é (cada CPF vazado é no mínimo 50 mil de multa)
+   
+
+
+   Supply chain - utilização de bliblioteca abertas não confiáveis
+  
+- Decisões da Arquitetura
+   São regras que precisam ser mantidas no sistema, para que o mesmo tenha o mínimo de padronização. exemplo: iremos utilizar arquitetura baseada em camadas.
+  
+
+  
+- Príncipios do Design
+Boas práticas, princípios que seria ideal sempre ser seguido
+
+sistema de mensageria - serviço colocado no meio da arquitetura, que permite a troca de mensagem, um manda mensagem e o outro recebe  
+
+event driven architecture - arquitetura baseada em eventos (alexa - cria máquina virtual, responde a pergunta, e cai a máquina virtual)
+
+
+
+
+
+
 
