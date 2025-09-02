@@ -63,28 +63,73 @@ Continuação SOLID
 26/08/2025
 Fundamentos da Arquitetura de Software
    
-- Caracteristicas da Arquitetura
+- Caracteristicas da Arquitetura = requisitos não funcionais
    Disponibilidade - estar online por um tempo definido
    Confiabiliade - o sistema faz o que deve ser feito
    Segurança - quão seguro o sistema é (cada CPF vazado é no mínimo 50 mil de multa)
+   Testabilidade
+   Escalabildade
+   Agilidade
+   Tolerância a falhas
+   Elasticidade
+   Recuperabilidade
+   Desempenho
+   Implementabilidade
+   Capacidade de aprendizagem
    
-
+   *É impossível um sistema atender todas as caracnteristicas da arquitetura, sempre ficará alguma coisa pendente*
 
    Supply chain - utilização de bliblioteca abertas não confiáveis
   
-- Decisões da Arquitetura
+- DECISÕES DA ARQUITETURA
    São regras que precisam ser mantidas no sistema, para que o mesmo tenha o mínimo de padronização. exemplo: iremos utilizar arquitetura baseada em camadas.
-  
+
+  Decidir a esturutra do sistema, escolhendo a arquitetura, uma decisão importante, que poderá ter um custo alto se feito de qualquer jeito
+
+  *A decisão da arquitetura depende das caracteristicas da arquitetura, um depende do outro*
 
   
-- Príncipios do Design
+- PRINCÍPIOS DO DESIGN
 Boas práticas, princípios que seria ideal sempre ser seguido
 
-sistema de mensageria - serviço colocado no meio da arquitetura, que permite a troca de mensagem, um manda mensagem e o outro recebe  
+(arquitetura distribuida) - micro serviços - pequenas atividades bem feitas, cada micro serviço tem seu próprio banco de dados (cada um tem vida própria) 
+
+
+sistema de mensageria - serviço colocado no meio da arquitetura, que permite a troca de mensagens dos micros serviços, um manda mensagem e o outro recebe  
 
 event driven architecture - arquitetura baseada em eventos (alexa - cria máquina virtual, responde a pergunta, e cai a máquina virtual)
 
+01/09/2025
 
+EXPECTATIVAS DO ARQUITETO
+
+- Tomar decisões de arquitetura - decidir qual arquitetura/ estrutura será utilizada no sistema, utilizando sua experiência no mercado para orientar a sua equipe. "O segredo para tomar decisões arquiteturais eficientes é perguntar se a decisão da arquitetura está ajudando a orientar as equipes ao fazerem a escolha técnica certa ou se a decisão faz a escolha técnica por elas."
+  
+- Analisar continuamente a arquitetura - todo sistema muda com o tempo, com isso, é função do arquiteto analisar o sistema continuamente e atualizar de acorodo com a arquitetura do sistema. O famoso "não mexe, que está funcionando", não deve ser considerado, e sim tomar decições corretas de acordo com suas análises que facilitarão o sistema
+  
+- Manter-se atualizando com as últimas tendências - desenvolver software está cada vez mais complexo (Inteligência Artificial)
+  
+- Assegurar a conformidade com as decisões - o arquiteto verifica continuamente se as equipes de desenvolvimento seguem as decisões da arquitetura e os princípios do design definidos, documentados e comunicados por ele.
+- Análise estática de código é a inspeção do código-fonte de um software sem executá-lo, utilizando ferramentas automatizadas para identificar bugs, vulnerabilidades de segurança e desvios de padrões de codificação antes da produção
+   
+- Exposição e experiência diverisades - um bom arquiteto já teve experiência em várias áreaa/funções e linguagens. Essencial ele ter conhecimento da regra de negócio do produto
+  
+- Ter conhecimento sobre o domínio do negócio -
+  
+- Ter habilidades interpessoais - um arquiteto precisa ser um gestor tambémm, um líder da equipe, incetivando e extaindo o melhor de cada membro da equipe
+
+- Enteder e lidarr bem com questões políticas - fundamental negociar com o cliente, negociar mais prazos, funcionalidades, influenciar e proteger sua equipe
+
+
+
+
+- 
+
+DEADLOCK - (ou interbloqueio) é uma situação de impasse em computação onde dois ou mais processos ficam permanentemente bloqueados, cada um esperando que o outro libere um recurso que ele precisa para continuar sua execução. Isso cria uma espera circular, onde o Processo A espera por um recurso do Processo B, e o Processo B espera por um recurso do Processo A, impedindo que qualquer um deles avance. 
+
+OPERAÇÕES - DevOps
+uma maneira de entregar valor ao meu cliente mais rápido
+metodologia que vai melhorando cada vez mais
 
 
 
