@@ -131,7 +131,11 @@ OPERAÇÕES - DevOps
 uma maneira de entregar valor ao meu cliente mais rápido
 metodologia que vai melhorando cada vez mais
 
+--------------------------------------------------------------------------------------- 02/09/2025 --------------------------------------------------------------------------------------------
 
+Resuma a diferença entre arquitetura e design ?
+A arquitetura de software define a estrutura global e os componentes principais de um sistema, ou seja, o que terá no sistema, enquanto o design se concentra nos detalhes de implementação desses componentes e suas interações em um nível mais baixo, ou seja, como será implamentado as decisões tomada pelo arquiteto. A arquitetura é uma visão de alto nível que garante requisitos globais como escalabilidade e segurança, enquanto o design detalha como cada parte do sistema funciona e se comunica. 
 
-
+Como é a formação do conhecimento de um arquiteto modelo T?
+Uma formação ampla, não se concentra em apenas uma linguagem ou área específica de trabalho. O arquieto tem a capacidade de resolver o mesmo problema, utilizando meios diferentes.
 
