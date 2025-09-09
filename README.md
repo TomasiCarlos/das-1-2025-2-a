@@ -1,6 +1,6 @@
 # das-1-2025-2-a
 
-04/08/2025
+--------------------------------------------------------------------------------------- 04/08/2025 --------------------------------------------------------------------------------------------
 
 *princípios de projeto de código
 *padronização de código
@@ -25,6 +25,7 @@ class A {
 }
 
 ---------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------- 05/08/2025 --------------------------------------------------------------------------------------------
 
 05/08/2025
 
@@ -54,10 +55,13 @@ M - Model (Representação dos dados)
 V - HTML (interface/ tela)
 C - Controlador (controlar a tela / ações dos botões)
 
+
+
 11/08/2025
 Continuação SOLID
 
-12/08/2025
+--------------------------------------------------------------------------------------- 12/08/2025 --------------------------------------------------------------------------------------------
+
 Continuação SOLID
 
 26/08/2025
@@ -99,7 +103,7 @@ sistema de mensageria - serviço colocado no meio da arquitetura, que permite a 
 
 event driven architecture - arquitetura baseada em eventos (alexa - cria máquina virtual, responde a pergunta, e cai a máquina virtual)
 
-01/09/2025
+--------------------------------------------------------------------------------------- 01/09/2025 --------------------------------------------------------------------------------------------
 
 EXPECTATIVAS DO ARQUITETO
 
@@ -138,4 +142,69 @@ A arquitetura de software define a estrutura global e os componentes principais 
 
 Como é a formação do conhecimento de um arquiteto modelo T?
 Uma formação ampla, não se concentra em apenas uma linguagem ou área específica de trabalho. O arquieto tem a capacidade de resolver o mesmo problema, utilizando meios diferentes.
+
+--------------------------------------------------------------------------------------- 08/09/2025 --------------------------------------------------------------------------------------------
+Pensamento Arquitetônico: Trade-Offs - Compensação.
+
+Toda arquitetura nunca atendederá todos os requisitos, não há uma solução ideal que resolva todos os problemas, existem compensações / meio termos.
+
+database centric - um banco de dados entre o insert e o select
+
+publisher => subscribers
+Um para muitos, quando o publisher publica no tópico, todos os inscritos (subscribers) recebem as mensagens
+
+Push notification = tópicos
+
+Todos os assinantes recebem a mensagem do publicante
+
+stream - permite voltar no tempo e reprocessar as mensagens. O stream possui um conceito dentro de si chamados partitions ou sharding (uma janela de tempo de 24horas a 7 dias)
+
+rabbitmq
+aws sns
+azure servicebus
+google pubsug
+redis
+
+protocolos:
+amqp
+mqtt
+web socket
+
+enqueue dequeue
+
+sender (1 para 1)
+receiver
+
+buffer 
+
+pooling - buscar as mensagens na fila(caixa de correios de casa , todos os dias verificar se tem cartas)
+
+aws sqs
+azure service bus
+rabbitmq
+
+Se um receiver cair, as mensagens ficarão na fila, e quando ele voltar terá acesso a essas mensagens
+
+Quando incluirmos alguém no tópico, não muda nada no publisher, pois o publisher e o subscribers estão totalmente desacoplados
+
+Quando incluirmos alguém na fila, precisamos mudar o publisher também, criar um novo caminho de comunicação 
+
+Tudo depende, depende do tamanho da mensagem, quantas mensagens, o tópico não é melhor que a fila, e nem a fila é melhor que o tópico, tudo depende de qual é a aplicação.
+
+
+"Com essa análise, fica claro que a abordagem de tópico usando o modelo de mensageria para publicar e assinar é a escolha óbvia e melhor. Contudo, para citar Rich Hickey, o criador da linguagem de programação Clojure:
+
+Os programadores conhecem os benefícios de tudo e os trade-offs de nada. Os arquitetos precisam entender ambos."
+
+arquitetura fan-out
+
+
+
+
+
+
+
+
+
+
 
