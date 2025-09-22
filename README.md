@@ -24,7 +24,6 @@ class A {
    private B b;
 }
 
----------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------- 05/08/2025 --------------------------------------------------------------------------------------------
 
 05/08/2025
@@ -55,40 +54,47 @@ M - Model (Representação dos dados)
 V - HTML (interface/ tela)
 C - Controlador (controlar a tela / ações dos botões)
 
+O MVC (Model–View–Controller) é um padrão de arquitetura de software que separa responsabilidades em três camadas:
 
+- Model (Modelo): Representa os dados e as regras de negócio do sistema. É responsável por manipular, armazenar e gerenciar as informações.
+- View (Visão): É a interface com o usuário. Exibe os dados do modelo e recebe as interações do usuário.
+- Controller (Controlador): Atua como intermediário entre Model e View. Recebe as ações do usuário (cliques, entradas, comandos), processa a lógica e atualiza o modelo ou a visão conforme necessário.
 
-11/08/2025
+--------------------------------------------------------------------------------------- 11/08/2025 -----------------------------------------------------------------------------------------------------------------
+
 Continuação SOLID
 
---------------------------------------------------------------------------------------- 12/08/2025 --------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------- 12/08/2025 -----------------------------------------------------------------------------------------------------------------
 
 Continuação SOLID
 
-26/08/2025
+--------------------------------------------------------------------------------------- 26/08/2025 ----------------------------------------------------------------------------------------------------------------
+
 Fundamentos da Arquitetura de Software
    
 - Caracteristicas da Arquitetura = requisitos não funcionais
-   Disponibilidade - estar online por um tempo definido
-   Confiabiliade - o sistema faz o que deve ser feito
-   Segurança - quão seguro o sistema é (cada CPF vazado é no mínimo 50 mil de multa)
-   Testabilidade
-   Escalabildade
-   Agilidade
-   Tolerância a falhas
-   Elasticidade
-   Recuperabilidade
-   Desempenho
-   Implementabilidade
-   Capacidade de aprendizagem
+
+Disponibilidade - Sistema acessível e funcional quando necessário
+Confiabilidade - Executa corretamente e de forma consistente
+Segurança - Proteção contra acessos e ações não autorizadas (cada CPF vazado é no mínimo 50 mil de multa)
+Testabilidade - Facilidade para verificar funcionamento e corrigir erros
+Escalabilidade - Capacidade de crescer sem perder eficiência
+Agilidade - Facilidade para adaptar-se a mudanças
+Tolerância a falhas - Continua operando mesmo com falhas parciais
+Elasticidade - Ajusta recursos conforme a demanda
+Recuperabilidade - Restauração rápida após falhas
+Desempenho - Rapidez e eficiência no processamento
+Implementabilidade - Facilidade de construir e implantar
+Capacidade de aprendizagem - Habilidade de evoluir e melhorar com uso e dados
    
    *É impossível um sistema atender todas as caracnteristicas da arquitetura, sempre ficará alguma coisa pendente*
 
-   Supply chain - utilização de bliblioteca abertas não confiáveis
+- Supply chain - utilização de bliblioteca abertas não confiáveis
   
 - DECISÕES DA ARQUITETURA
-   São regras que precisam ser mantidas no sistema, para que o mesmo tenha o mínimo de padronização. exemplo: iremos utilizar arquitetura baseada em camadas.
+São regras que precisam ser mantidas no sistema, para que o mesmo tenha o mínimo de padronização. exemplo: iremos utilizar arquitetura baseada em camadas.
 
-  Decidir a esturutra do sistema, escolhendo a arquitetura, uma decisão importante, que poderá ter um custo alto se feito de qualquer jeito
+Decidir a esturutra do sistema, escolhendo a arquitetura, uma decisão importante, que poderá ter um custo alto se feito de qualquer jeito
 
   *A decisão da arquitetura depende das caracteristicas da arquitetura, um depende do outro*
 
@@ -96,10 +102,9 @@ Fundamentos da Arquitetura de Software
 - PRINCÍPIOS DO DESIGN
 Boas práticas, princípios que seria ideal sempre ser seguido
 
-(arquitetura distribuida) - micro serviços - pequenas atividades bem feitas, cada micro serviço tem seu próprio banco de dados (cada um tem vida própria) 
+(arquitetura distribuida) - microsserviços - pequenas atividades bem feitas, cada microsserviço tem seu próprio banco de dados (cada um tem vida própria) 
 
-
-sistema de mensageria - serviço colocado no meio da arquitetura, que permite a troca de mensagens dos micros serviços, um manda mensagem e o outro recebe  
+sistema de mensageria - serviço colocado no meio da arquitetura, que permite a troca de mensagens dos microsserviços, um manda mensagem e o outro recebe  
 
 event driven architecture - arquitetura baseada em eventos (alexa - cria máquina virtual, responde a pergunta, e cai a máquina virtual)
 
@@ -118,16 +123,11 @@ EXPECTATIVAS DO ARQUITETO
    
 - Exposição e experiência diverisades - um bom arquiteto já teve experiência em várias áreaa/funções e linguagens. Essencial ele ter conhecimento da regra de negócio do produto
   
-- Ter conhecimento sobre o domínio do negócio -
+- Ter conhecimento sobre o domínio do negócio - conhecer o negócio do cliente, por exemplo, o arquiteto não precisa ser especialista em finanças, mas precisa conhecer os termos utilizadados em finanças para poder entender a demanda do cliente.
   
 - Ter habilidades interpessoais - um arquiteto precisa ser um gestor tambémm, um líder da equipe, incetivando e extaindo o melhor de cada membro da equipe
 
-- Enteder e lidarr bem com questões políticas - fundamental negociar com o cliente, negociar mais prazos, funcionalidades, influenciar e proteger sua equipe
-
-
-
-
-- 
+- Enteder e lidar bem com questões políticas - fundamental negociar com o cliente, negociar mais prazos, funcionalidades, influenciar e proteger sua equipe
 
 DEADLOCK - (ou interbloqueio) é uma situação de impasse em computação onde dois ou mais processos ficam permanentemente bloqueados, cada um esperando que o outro libere um recurso que ele precisa para continuar sua execução. Isso cria uma espera circular, onde o Processo A espera por um recurso do Processo B, e o Processo B espera por um recurso do Processo A, impedindo que qualquer um deles avance. 
 
@@ -138,13 +138,13 @@ metodologia que vai melhorando cada vez mais
 --------------------------------------------------------------------------------------- 02/09/2025 --------------------------------------------------------------------------------------------
 
 Resuma a diferença entre arquitetura e design ?
-A arquitetura de software define a estrutura global e os componentes principais de um sistema, ou seja, o que terá no sistema, enquanto o design se concentra nos detalhes de implementação desses componentes e suas interações em um nível mais baixo, ou seja, como será implamentado as decisões tomada pelo arquiteto. A arquitetura é uma visão de alto nível que garante requisitos globais como escalabilidade e segurança, enquanto o design detalha como cada parte do sistema funciona e se comunica. 
+A arquitetura de software define a estrutura global e os componentes principais de um sistema, ou seja, o que terá no sistema, enquanto o design se concentra nos detalhes de implementação desses componentes e suas interações em um nível mais baixo, ou seja, como será implementado as decisões tomada pelo arquiteto. A arquitetura é uma visão de alto nível que garante requisitos globais como escalabilidade e segurança, enquanto o design detalha como cada parte do sistema funciona e se comunica. 
 
 Como é a formação do conhecimento de um arquiteto modelo T?
 Uma formação ampla, não se concentra em apenas uma linguagem ou área específica de trabalho. O arquieto tem a capacidade de resolver o mesmo problema, utilizando meios diferentes.
 
 --------------------------------------------------------------------------------------- 08/09/2025 --------------------------------------------------------------------------------------------
-Pensamento Arquitetônico: Trade-Offs - Compensação.
+Pensamento Arquitetônico: Trade-Offs - Compensação. (perco de uma parte, mas ganho em outra)
 
 Toda arquitetura nunca atendederá todos os requisitos, não há uma solução ideal que resolva todos os problemas, existem compensações / meio termos.
 
@@ -159,29 +159,30 @@ Todos os assinantes recebem a mensagem do publicante
 
 stream - permite voltar no tempo e reprocessar as mensagens. O stream possui um conceito dentro de si chamados partitions ou sharding (uma janela de tempo de 24horas a 7 dias)
 
-rabbitmq
-aws sns
-azure servicebus
-google pubsug
-redis
+RabbitMQ - Broker de mensagens para filas e roteamento
+AWS SNS - Serviço de notificação/publish-subscribe da AWS
+Azure Service Bus - Mensageria corporativa com filas e tópicos
+Google Pub/Sub - Mensageria assíncrona e escalável do Google Cloud
+Redis - Banco em memória, rápido, usado para cache e filas
 
 protocolos:
-amqp
-mqtt
-web socket
+AMQP - Protocolo de mensageria avançada, confiável e robusto para filas
+MQTT - Protocolo leve de publicação/assinatura, ideal para IoT
+WebSocket - Comunicação bidirecional em tempo real sobre TCP
 
-enqueue dequeue
+Enqueue - Inserir um item na fila (entrar)
+Dequeue - Remover um item da fila (sair)
 
-sender (1 para 1)
-receiver
+Sender - é o componente que envia dados ou mensagens para outro sistema, serviço ou receptor
+Receiver é o componente que recebe dados ou mensagens em um sistema de comunicação ou mensageria
 
-buffer 
+Buffer - Área temporária de memória usada para armazenar dados enquanto são transferidos entre sistemas, dispositivos ou processos.
 
-pooling - buscar as mensagens na fila(caixa de correios de casa , todos os dias verificar se tem cartas)
+Pooling - buscar as mensagens na fila (caixa de correios de casa, todos os dias verificar se tem cartas)
 
-aws sqs
-azure service bus
-rabbitmq
+AWS SQS - Fila de mensagens totalmente gerenciada da AWS, simples e escalável.
+Azure Service Bus - Serviço de mensageria corporativa da Azure, com suporte a filas, tópicos e padrões avançados.
+RabbitMQ - Broker de mensagens open source, flexível, suporta vários protocolos (como AMQP
 
 Se um receiver cair, as mensagens ficarão na fila, e quando ele voltar terá acesso a essas mensagens
 
@@ -191,13 +192,16 @@ Quando incluirmos alguém na fila, precisamos mudar o publisher também, criar u
 
 Tudo depende, depende do tamanho da mensagem, quantas mensagens, o tópico não é melhor que a fila, e nem a fila é melhor que o tópico, tudo depende de qual é a aplicação.
 
-
 "Com essa análise, fica claro que a abordagem de tópico usando o modelo de mensageria para publicar e assinar é a escolha óbvia e melhor. Contudo, para citar Rich Hickey, o criador da linguagem de programação Clojure:
 
 Os programadores conhecem os benefícios de tudo e os trade-offs de nada. Os arquitetos precisam entender ambos."
 
-arquitetura fan-out
-
+Arquitetura fan-out
+É um padrão de mensageria onde uma mensagem publicada por um produtor é replicada e entregue a múltiplos consumidores ao mesmo tempo.
+Exemplo:
+O sender envia a mensagem para um tópico ou exchange.
+O sistema distribui (faz o fan-out) para todas as filas ou subscribers conectados.
+Cada consumidor recebe sua cópia da mensagem.
 
 
 
