@@ -1,23 +1,31 @@
 # das-1-2025-2-a
 
 --------------------------------------------------------------------------------------- 04/08/2025 --------------------------------------------------------------------------------------------
+PRINCÍPIOS DE PROJETO DE CÓDIGO
 
-*princípios de projeto de código
-*padronização de código
-*ocultamento de informação
-*coesão
-*Acoplamento
+PADRONIZAÇÃO DE CÓDIGO
+Os padrões ajudam a reduzir a complexidade dos sistemas, tornando-os mais fáceis de entender, manter e evoluir
 
-O que é Abstração:
+OCULTAMENTO DE INFORMAÇÃO
+Não é preciso conhecer em detalhe todo o funcionamento de um framework para utilizá-lo. Apenas a interface essencial deve estar visível, escondendo a complexidade interna.
+
+COESÃO
+O código que tem coesão, é um código que faz uma coisa bem feita. Se espera que um código seja escrito com coesidade. Ao verificar o código o programador reconheça do que se trata com facilidade. Elementos de um módulo (como classes, funções ou pacotes) estão relacionados e trabalham juntos para um propósito único e bem definido.
+
+ACOPLAMENTO: dependência de uma classe com outra
+Autoacoplamento: instanciação e uso de um método no construtor de outra classe
+
+ABSTRAÇÃO
 Capacidade de abstrair informações do mundo real diminuindo a complexidade do sistema, que são representações simplificadas de entidades
 
-Débito técnico, problemas técnicos no código, algo que mexido entrará em colapso
+DÉBITO TÉCNICO
+Problemas técnicos no código, algo que mexido entrará em colapso
 
-O código que tem coesão, é um código que faz uma coisa bem feita. Se espera que um código seja escrito com coesidade. Ao verificar o código o programador reconheça do que se trata com facilidade.
+HERANÇA
 
-Herança
-Implementação
-Associação 
+IMPLENTAÇÃO
+
+ASSOCIAÇÃO 
 
 Código de associação  - auto acoplamento (quando mexo em uma parte do código e afeta outro)
 class A {
@@ -28,11 +36,14 @@ class A {
 
 05/08/2025
 
-Solid - 5 conceitos
+SOLID - 5 CONCEITOS
 Usar a orientação a objeto do jeito mais correto possível
-S - Single Responsibility Principle (principio de responsabilidade única) - toda classe deve ter uma única responsabilidade;
 
-O - Open/Closed Principle (Princípio Aberto/Fechado) - uma classe deve estar fechada para modificações e aberta para extensões.
+S - SINGLE RESPONSABILITY PRINCIPLE
+(principio de responsabilidade única) - toda classe deve ter uma única responsabilidade;
+
+O - OPEN/CLOSED PRINCIPLE
+(Princípio Aberto/Fechado) - uma classe deve estar fechada para modificações e aberta para extensões.
 
 Prefira Composição a Herança - Evitar o útilizo de heranças, priorizar o utilizado de composição. Utilizar herança em casos de divisão. (Ex: gato <= animal => cachorro), o gato é um animal, mas nunca será um cachorro, mesma coisa o cachorro, o mesmo é um animal, mas nunca será um gato. "Herança expõe para subclasses detalhes de implementação das classes pai. Logo, frequentemente diz-se que herança viola o encapsulamento das classes pai."
 
@@ -43,11 +54,14 @@ O Princípio de Demeter - Princípio do Menor Conhecimento - (Principle of Least
 - de atributos da classe do método (caso 4)
 Limitar o objeto a atributos locais, evitando variáveis globais. 
 
-L - Liskov Substitution Principle (Princípio de Substituição de Liskov) - Respeitar a assinatura do pai, trocar um filho pelo outro mantém a funcionalidade do código. 
+L - LISKOV SUBSTITUTION PRINCIPLE
+Princípio de Substituição de Liskov - Respeitar a assinatura do pai, trocar um filho pelo outro mantém a funcionalidade do código. 
 
-I - Interface Segregation Principle - (Princípio da Segregação de Interfaces) - a comunicação entre duas classes não deve ser feita diretamente, o ideal é essa comunicação de classe A e classe B é ser feita por uma interface;
+I - INTERFACE SEGREGATION PRINCIPLE
+Princípio da Segregação de Interfaces - a comunicação entre duas classes não deve ser feita diretamente, o ideal é essa comunicação de classe A e classe B é ser feita por uma interface;
 
-D - Dependency Inversion Principle - (Principio de inversão de dependencia) - uma classe deve estabelecer dependências prioritariamente com abstrações e não com implementações concretas. (Controller => <<interface>> => Service). Não depende diretamente de uma classe e sim de uma interface 
+D - DEPENDENCY INVERSION PRINCIPLE
+(Principio de inversão de dependencia) - uma classe deve estabelecer dependências prioritariamente com abstrações e não com implementações concretas. (Controller => <<interface>> => Service). Não depende diretamente de uma classe e sim de uma interface 
 
 MVC
 M - Model (Representação dos dados)
@@ -62,15 +76,15 @@ O MVC (Model–View–Controller) é um padrão de arquitetura de software que s
 
 --------------------------------------------------------------------------------------- 11/08/2025 -----------------------------------------------------------------------------------------------------------------
 
-Continuação SOLID
+CONTINUAÇÃO SOLID
 
 --------------------------------------------------------------------------------------- 12/08/2025 -----------------------------------------------------------------------------------------------------------------
 
-Continuação SOLID
+CONTINUAÇÃO SOLID
 
 --------------------------------------------------------------------------------------- 26/08/2025 ----------------------------------------------------------------------------------------------------------------
 
-Fundamentos da Arquitetura de Software
+FUNDAMENTOS DA ARQUITETURA DE SOFTWARE
    
 - Caracteristicas da Arquitetura = requisitos não funcionais
 
@@ -91,20 +105,20 @@ Capacidade de aprendizagem - Habilidade de evoluir e melhorar com uso e dados
 
 - Supply chain - utilização de bliblioteca abertas não confiáveis
   
-- DECISÕES DA ARQUITETURA
+DECISÕES DA ARQUITETURA
 São regras que precisam ser mantidas no sistema, para que o mesmo tenha o mínimo de padronização. exemplo: iremos utilizar arquitetura baseada em camadas.
 
 Decidir a esturutra do sistema, escolhendo a arquitetura, uma decisão importante, que poderá ter um custo alto se feito de qualquer jeito
 
   *A decisão da arquitetura depende das caracteristicas da arquitetura, um depende do outro*
 
-  
-- PRINCÍPIOS DO DESIGN
+PRINCÍPIOS DO DESIGN
 Boas práticas, princípios que seria ideal sempre ser seguido
 
 (arquitetura distribuida) - microsserviços - pequenas atividades bem feitas, cada microsserviço tem seu próprio banco de dados (cada um tem vida própria) 
 
-sistema de mensageria - serviço colocado no meio da arquitetura, que permite a troca de mensagens dos microsserviços, um manda mensagem e o outro recebe  
+SISTEMA DE MENSAGERIA
+Serviço colocado no meio da arquitetura, que permite a troca de mensagens dos microsserviços, um manda mensagem e o outro recebe  
 
 event driven architecture - arquitetura baseada em eventos (alexa - cria máquina virtual, responde a pergunta, e cai a máquina virtual)
 
@@ -129,7 +143,8 @@ EXPECTATIVAS DO ARQUITETO
 
 - Enteder e lidar bem com questões políticas - fundamental negociar com o cliente, negociar mais prazos, funcionalidades, influenciar e proteger sua equipe
 
-DEADLOCK - (ou interbloqueio) é uma situação de impasse em computação onde dois ou mais processos ficam permanentemente bloqueados, cada um esperando que o outro libere um recurso que ele precisa para continuar sua execução. Isso cria uma espera circular, onde o Processo A espera por um recurso do Processo B, e o Processo B espera por um recurso do Processo A, impedindo que qualquer um deles avance. 
+DEADLOCK - (ou interbloqueio) 
+É uma situação de impasse em computação onde dois ou mais processos ficam permanentemente bloqueados, cada um esperando que o outro libere um recurso que ele precisa para continuar sua execução. Isso cria uma espera circular, onde o Processo A espera por um recurso do Processo B, e o Processo B espera por um recurso do Processo A, impedindo que qualquer um deles avance. 
 
 OPERAÇÕES - DevOps
 uma maneira de entregar valor ao meu cliente mais rápido
@@ -137,13 +152,14 @@ metodologia que vai melhorando cada vez mais
 
 --------------------------------------------------------------------------------------- 02/09/2025 --------------------------------------------------------------------------------------------
 
-Resuma a diferença entre arquitetura e design ?
+DIFERENÇA ENTRE ARQUITETURA E DESIGN
 A arquitetura de software define a estrutura global e os componentes principais de um sistema, ou seja, o que terá no sistema, enquanto o design se concentra nos detalhes de implementação desses componentes e suas interações em um nível mais baixo, ou seja, como será implementado as decisões tomada pelo arquiteto. A arquitetura é uma visão de alto nível que garante requisitos globais como escalabilidade e segurança, enquanto o design detalha como cada parte do sistema funciona e se comunica. 
 
 Como é a formação do conhecimento de um arquiteto modelo T?
 Uma formação ampla, não se concentra em apenas uma linguagem ou área específica de trabalho. O arquieto tem a capacidade de resolver o mesmo problema, utilizando meios diferentes.
 
 --------------------------------------------------------------------------------------- 08/09/2025 --------------------------------------------------------------------------------------------
+
 Pensamento Arquitetônico: Trade-Offs - Compensação. (perco de uma parte, mas ganho em outra)
 
 Toda arquitetura nunca atendederá todos os requisitos, não há uma solução ideal que resolva todos os problemas, existem compensações / meio termos.
@@ -165,7 +181,7 @@ Azure Service Bus - Mensageria corporativa com filas e tópicos
 Google Pub/Sub - Mensageria assíncrona e escalável do Google Cloud
 Redis - Banco em memória, rápido, usado para cache e filas
 
-protocolos:
+PROTOCÓLOS:
 AMQP - Protocolo de mensageria avançada, confiável e robusto para filas
 MQTT - Protocolo leve de publicação/assinatura, ideal para IoT
 WebSocket - Comunicação bidirecional em tempo real sobre TCP
@@ -173,12 +189,17 @@ WebSocket - Comunicação bidirecional em tempo real sobre TCP
 Enqueue - Inserir um item na fila (entrar)
 Dequeue - Remover um item da fila (sair)
 
-Sender - é o componente que envia dados ou mensagens para outro sistema, serviço ou receptor
-Receiver é o componente que recebe dados ou mensagens em um sistema de comunicação ou mensageria
+SENDER
+É o componente que envia dados ou mensagens para outro sistema, serviço ou receptor
 
-Buffer - Área temporária de memória usada para armazenar dados enquanto são transferidos entre sistemas, dispositivos ou processos.
+RECEIVER 
+É o componente que recebe dados ou mensagens em um sistema de comunicação ou mensageria
 
-Pooling - buscar as mensagens na fila (caixa de correios de casa, todos os dias verificar se tem cartas)
+BUFFER
+Área temporária de memória usada para armazenar dados enquanto são transferidos entre sistemas, dispositivos ou processos.
+
+POOLING
+Buscar as mensagens na fila (caixa de correios de casa, todos os dias verificar se tem cartas)
 
 AWS SQS - Fila de mensagens totalmente gerenciada da AWS, simples e escalável.
 Azure Service Bus - Serviço de mensageria corporativa da Azure, com suporte a filas, tópicos e padrões avançados.
@@ -194,9 +215,9 @@ Tudo depende, depende do tamanho da mensagem, quantas mensagens, o tópico não 
 
 "Com essa análise, fica claro que a abordagem de tópico usando o modelo de mensageria para publicar e assinar é a escolha óbvia e melhor. Contudo, para citar Rich Hickey, o criador da linguagem de programação Clojure:
 
-Os programadores conhecem os benefícios de tudo e os trade-offs de nada. Os arquitetos precisam entender ambos."
+ "Os programadores conhecem os benefícios de tudo e os trade-offs de nada. Os arquitetos precisam entender ambos."
 
-Arquitetura fan-out
+ARQUITETURA FAN-OUT
 É um padrão de mensageria onde uma mensagem publicada por um produtor é replicada e entregue a múltiplos consumidores ao mesmo tempo.
 Exemplo:
 O sender envia a mensagem para um tópico ou exchange.
