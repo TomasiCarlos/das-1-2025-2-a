@@ -2,6 +2,7 @@
 
 --------------------------------------------------------------------------------------- 04/08/2025 --------------------------------------------------------------------------------------------
 PRINCÍPIOS DE PROJETO DE CÓDIGO
+Princípios de projeto de código são diretrizes e boas práticas que orientam os desenvolvedores na criação de software de alta qualidade, visando tornar o código mais legível, compreensível, manutenível e eficiente.
 
 PADRONIZAÇÃO DE CÓDIGO
 Os padrões ajudam a reduzir a complexidade dos sistemas, tornando-os mais fáceis de entender, manter e evoluir
@@ -22,10 +23,10 @@ DÉBITO TÉCNICO
 Problemas técnicos no código, algo que mexido entrará em colapso
 
 HERANÇA
+Permite que uma classe (subclasse) herde propriedades (atributos e métodos) de outra classe (superclasse), promovendo a reutilização de código e a criação de hierarquias de classes.
 
 IMPLENTAÇÃO
-
-ASSOCIAÇÃO 
+É a fase em que um software é instalado, configurado e adaptado para uso numa organização, transformando os dados técnicos em um sistema pronto para o utilizador final 
 
 Código de associação  - auto acoplamento (quando mexo em uma parte do código e afeta outro)
 class A {
@@ -35,6 +36,67 @@ class A {
 --------------------------------------------------------------------------------------- 05/08/2025 --------------------------------------------------------------------------------------------
 
 05/08/2025
+
+package br.univille;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+
+public class Janelinha extends JFrame{
+
+    private JButton botaozinho;
+    private Controlador controlador;
+
+    public Janelinha() {
+        setTitle("Eu nao acredito");
+        setSize(500,500);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        botaozinho = new JButton("ME CLICA");
+        controlador = new Controlador();
+        botaozinho.addActionListener(controlador);
+
+        /*botaozinho.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(null,"oi");
+            }
+        });*/
+        
+        add(botaozinho);
+
+        setVisible(true);
+    }
+    public static void main(String[] args) {
+        new Janelinha();
+    }
+}
+
+package br.univille;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JOptionPane;
+
+public class Controlador implements ActionListener{
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        meClica();
+    }
+
+    private void meClica(){
+        JOptionPane.showMessageDialog(null, "NAO ACREDITO");
+    }
+    
+    
+}
 
 SOLID - 5 CONCEITOS
 Usar a orientação a objeto do jeito mais correto possível
@@ -81,6 +143,11 @@ CONTINUAÇÃO SOLID
 --------------------------------------------------------------------------------------- 12/08/2025 -----------------------------------------------------------------------------------------------------------------
 
 CONTINUAÇÃO SOLID
+
+--------------------------------------------------------------------------------------- 25/08/2025 -----------------------------------------------------------------------------------------------------------------
+
+OBSERVER
+Observer é um padrão de design comportamental que permite definir um mecanismo de assinatura para notificar vários objetos sobre quaisquer eventos que aconteçam com o objeto que eles estão observando.
 
 --------------------------------------------------------------------------------------- 26/08/2025 ----------------------------------------------------------------------------------------------------------------
 
