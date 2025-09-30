@@ -291,6 +291,22 @@ O sender envia a mensagem para um tópico ou exchange.
 O sistema distribui (faz o fan-out) para todas as filas ou subscribers conectados.
 Cada consumidor recebe sua cópia da mensagem.
 
+------------------------------------------------------------------------------- 29/09/2025 - 2ª BIMESTRE --------------------------------------------------------------------------------------------
+https://learn.microsoft.com/pt-br/azure/architecture/patterns/circuit-breaker?wt.mc_id=AZ-MVP-5003638
+
+CIRCUIT BREAKER
+O padrão Circuit Breaker ajuda a lidar com falhas que podem levar diferentes períodos de tempo para serem resolvidas quando um aplicativo se conecta a um serviço ou recurso remoto. Um disjuntor bloqueia temporariamente o acesso a um serviço com falha depois de detectar falhas. Essa ação impede repetidas tentativas malsucedidas para que o sistema possa se recuperar efetivamente. Esse padrão pode melhorar a estabilidade e a resiliência de um aplicativo.
+
+Quando um sistema (A) chama o outro (B), porém não confio se o segundo sistema esteja no ar
+
+A idéia é protejer o sistema, como se fosse um disjuntor
+
+Estados de um circuit Breaker
+Closed - Quando está tudo bem o circuit Breaker está tudo fechado (closed)
+Open - Quando acontece uma falha, o disjuntor (circuit Breaker), abre, ou seja, aconteceu uma falha, chamei o sistema B, mas ele não respondeu
+Half-Open - sistema tenta conectar, como se fosse um rele térmico, ele tenta ligar se o rele ainda estiver quente ele não fecha o circuit breaker, se o rele estiver pronto pra ligar, ele liga, porem o sistema fica em alerta, necessita atenção
+
+
 
 
 
