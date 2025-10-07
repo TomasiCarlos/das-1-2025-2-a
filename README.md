@@ -306,11 +306,72 @@ Closed - Quando está tudo bem o circuit Breaker está tudo fechado (closed)
 Open - Quando acontece uma falha, o disjuntor (circuit Breaker), abre, ou seja, aconteceu uma falha, chamei o sistema B, mas ele não respondeu
 Half-Open - sistema tenta conectar, como se fosse um rele térmico, ele tenta ligar se o rele ainda estiver quente ele não fecha o circuit breaker, se o rele estiver pronto pra ligar, ele liga, porem o sistema fica em alerta, necessita atenção
 
+------------------------------------------------------------------------------- 06/10/2025 - 2ª BIMESTRE --------------------------------------------------------------------------------------------
 
+Definição das características da arquitetura
+- Devem ser:
+  * Fora do domínio do problema.
+  * Influenciar a estrutura do design.
+  * Essenciais para o sucesso da aplicação.
+- Direcionam decisões arquiteturais.
+- Impactam diretamente a qualidade e viabilidade do sistema.
 
+Categorias de Características da Arquitetura
+- Operacionais:
+  * Disponibilidade            * Tempo que o sistema deve ficar ativo.
+  * Desempenho                 * Tempo de resposta, testes de estresse, picos.
+  * Escalabilidade             * Suportar aumento de usuários/dados.
+  * Confiabilidade             * Funcionar mesmo sob falhas.
+  * Recuperabilidade           * Tempo de recuperação após falha.
+  * Robustez                   * Lidar com erros e falhas externas.
+- Estruturais:
+  * Manutenção                 * Facilidade de alteração/melhoria.
+  * Portabilidade              * Rodar em diferentes plataformas.
+  * Reutilização               * Uso de componentes em outros projetos.
+  * Atualização                * Facilidade de atualizar versões.
+  * Instalação                 * Facilidade de instalar em diferentes ambientes.
+- Transversais:
+  * Segurança                  * Criptografia, controle de acesso.
+  * Privacidade                * Proteção contra acessos internos indevidos.
+  * Autenticação e Autorização * Identificar e limitar acesso.
+  * Acessibilidade             * Inclusão de usuários com deficiência.
+  * Legalidade                 * Conformidade com leis e regulamentos.
+  * Usabilidade                * Facilidade de uso e aprendizado.
+  * Armazenamento              * Políticas de retenção de dados.
 
+Características Explícitas vs. Implícitas
+- Explícitas:
+  * Aparecem nos requisitos.
+- Implícitas:
+  * São essenciais, mas raramente documentadas.
 
+Definições ISO
+- Eficiência do desempenho:
+  * Recursos vs. resposta.
+- Compatibilidade:
+  * Integração com outros sistemas.
+- Confiabilidade:
+  * Estabilidade e tolerância a falhas.
+- Segurança:
+  * Proteção dos dados e rastreabilidade.
+- Manutenibilidade:
+  * Facilidade de modificar e testar.
+- Portabilidade:
+  * Adaptação a diferentes ambientes.
+- Usabilidade:
+  * Facilidade de uso e acessibilidade.
 
+------------------------------------------------------------------------------- 07/10/2025 - 2ª BIMESTRE --------------------------------------------------------------------------------------------
+https://learn.microsoft.com/pt-br/azure/architecture/patterns/cqrs
+
+CQRS
+(Segregação de Responsabilidade de Comando e Consulta) é um padrão de design que segrega operações de leitura e gravação de um armazenamento de dados em modelos de dados separados. Essa abordagem permite que cada modelo seja otimizado de forma independente e pode melhorar o desempenho, a escalabilidade e a segurança de um aplicativo.
+
+Usado quando atinge o limite da escalabilidade vertical da máquina
+Estância primária - Somente para escrever (servidor 1)
+Replica de leitura - Somente para ler (servidor 2)
+O sistema poderá estar conectado com 2,3 ou mais bancos de dados
+Podendo ter atrasos, pois a comunicação entre os bancos é assincrona
 
 
 
