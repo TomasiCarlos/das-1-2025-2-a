@@ -373,7 +373,7 @@ Replica de leitura - Somente para ler (servidor 2)
 O sistema poderá estar conectado com 2,3 ou mais bancos de dados
 Podendo ter atrasos, pois a comunicação entre os bancos é assincrona
 
-------------------------------------------------------------------------------- 07/10/2025 - 2ª BIMESTRE --------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------- 09/10/2025 - 2ª BIMESTRE --------------------------------------------------------------------------------------------
 https://learn.microsoft.com/pt-br/azure/architecture/patterns/retry
 
 Estratégias de repetição
@@ -393,6 +393,7 @@ A GRANDE BOLA DE LAMA
 
 ARQUITETURA UNITÁRIA
 Software roda em um único computador
+Sistemas embarcados (TV, geladeira, eletrodomésticos)
 
 CLIENTE/SERVIDOR
 O modelo cliente/servidor é uma arquitetura em que um cliente (um aplicativo ou dispositivo que solicita um serviço) se comunica com um servidor (um computador ou software que fornece o serviço e os dados). Os clientes iniciam as solicitações, e os servidores respondem com os recursos, dados ou serviços solicitados, como um navegador que pede uma página da web a um servidor web. 
@@ -409,5 +410,37 @@ Cliente / Servidor / Web Server
 web 2.0 (sistema distribuido)
 máquina usuário recebe HTML e Json (aplicação rodando no cliente)
 Web Server se torna uma API Rest (aplicação rodando no web server)
+
+------------------------------------------------------------------------------- 10/10/2025 - 2ª BIMESTRE --------------------------------------------------------------------------------------------
+https://learn.microsoft.com/pt-br/azure/architecture/patterns/retry
+
+TRÊS CAMADAS
+Uma arquitetura que ficou bem popular no final dos anos 1990 foi uma arquitetura de três camadas, que fornecia mais camadas de separação. Quando ferramentas como servidores de aplicação se tornaram populares em Java e .NET, as empresas começaram a criar ainda mais camadas na topologia: uma camada de banco de dados usando um servidor de banco de dados com capacidade industrial, uma camada de aplicação gerenciada por um servidor de aplicação, um front-end escrito em HTML gerado e cada vez mais JavaScript, conforme suas capacidades expandiam.
+
+ARQUITETURAS MONOLÍTICAS VERSUS DISTRIBUÍDAS
+Monolíto - sistema onde todas as funcionalidades estão em uma única base de código centralizado
+
+Log distribuído
+
+Transações distribuídas
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
