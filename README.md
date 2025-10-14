@@ -373,7 +373,41 @@ Replica de leitura - Somente para ler (servidor 2)
 O sistema poderá estar conectado com 2,3 ou mais bancos de dados
 Podendo ter atrasos, pois a comunicação entre os bancos é assincrona
 
+------------------------------------------------------------------------------- 07/10/2025 - 2ª BIMESTRE --------------------------------------------------------------------------------------------
+https://learn.microsoft.com/pt-br/azure/architecture/patterns/retry
 
+Estratégias de repetição
+Se um aplicativo detectar uma falha ao tentar enviar uma solicitação para um serviço remoto, ele poderá lidar com falhas usando as seguintes estratégias:
 
+CANCELAR (cancel)
+Se a falha indica não ser transitória ou provavelmente não será bem-sucedida se for repetida, o aplicativo deve cancelar a operação e relatar uma exceção.
+
+TENTE NOVAMENTE IMEDIATAMENTE (retry immediately)
+Se a falha específica relatada for incomum ou rara, como um pacote de rede corrompido durante a transmissão, o melhor curso de ação poderá repetir imediatamente a solicitação.
+
+TENTAR NOVAMENTE APÓS ATRASO (retry after delay)
+Se a falha for causada por uma das falhas mais comuns de conectividade ou ocupado, a rede ou o serviço poderá precisar de um curto período enquanto os problemas de conectividade forem corrigidos ou a lista de pendências de trabalho for desmarcada, portanto, atrasar programaticamente a repetição é uma boa estratégia. Em muitos casos, deve ser escolhido o período entre as novas tentativas a fim de distribuir solicitações de várias instâncias do aplicativo da maneira mais uniforme possível para reduzir a chance de um serviço ocupado continuar sobrecarregado.
+
+A GRANDE BOLA DE LAMA 
+É um padrão de software que descreve um sistema desorganizado, sem uma estrutura arquitetural clara, onde componentes estão fortemente acoplados. Ele surge da falta de planejamento a longo prazo, levando a um código difícil de entender, manter e estender, tornando as alterações arriscadas e trabalhosas. 
+
+ARQUITETURA UNITÁRIA
+Software roda em um único computador
+
+CLIENTE/SERVIDOR
+O modelo cliente/servidor é uma arquitetura em que um cliente (um aplicativo ou dispositivo que solicita um serviço) se comunica com um servidor (um computador ou software que fornece o serviço e os dados). Os clientes iniciam as solicitações, e os servidores respondem com os recursos, dados ou serviços solicitados, como um navegador que pede uma página da web a um servidor web. 
+
+DESKTOP + SERVIDOR DE BANCO DE DADOS (Cliente/ Servidor/ Database Centric)
+Um grande Banco de dados parrudo com outras máquinas conectadas, cada máquina tem o software instalado nela mesmo. A lógica fica instalado na máquina (telas de cadastro) e no banco de dados (store procedure).
+Para atualização, primeiro se atualiza o banco de dados, e depois se atualiza máquina por máquina.
+
+NAVEGADOR + SERVIDOR WEB 
+(web 1.0)
+Banco de dados <===> Web Server <===> Máquina (navegação de HTML)
+Cliente / Servidor / Web Server
+
+web 2.0 (sistema distribuido)
+máquina usuário recebe HTML e Json (aplicação rodando no cliente)
+Web Server se torna uma API Rest (aplicação rodando no web server)
 
 
