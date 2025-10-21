@@ -424,7 +424,9 @@ Log distribuído
 
 Transações distribuídas
 
+------------------------------------------------------------------------------- 20/10/2025 - 2ª BIMESTRE --------------------------------------------------------------------------------------------
 
+ A maioria das arquiteturas em camadas consiste em quatro camadas padrão: apresentação, comercial, persistência e banco de dados,
 
 
 
