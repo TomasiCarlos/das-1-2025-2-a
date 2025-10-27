@@ -428,7 +428,11 @@ Transações distribuídas
 
  A maioria das arquiteturas em camadas consiste em quatro camadas padrão: apresentação, comercial, persistência e banco de dados,
 
+resumo CAPÍTULO 10
 
+Estilo de Arquitetura em Camadas
+
+------------------------------------------------------------------------------- 27/10/2025 - 2ª BIMESTRE --------------------------------------------------------------------------------------------
 
 
 
