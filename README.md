@@ -442,6 +442,9 @@ PIPELINE
 ARQUITETURA MICROKERNEL
 A arquitetura Microkernel divide o sistema em um núcleo mínimo, que contém apenas as funções essenciais, e um conjunto de plugins, que adicionam ou estendem funcionalidades. O núcleo é estável e simples, os plugins são modulares, podem ser trocados e evoluem sem afetar o restante do sistema. Esse estilo é ideal para plataformas extensíveis, como IDEs e sistemas que precisam de personalização constante.
 
+Dia 10/11/2025
+Arquitetura 
+Micro serviço
 
 
 
