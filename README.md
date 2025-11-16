@@ -420,31 +420,27 @@ Uma arquitetura que ficou bem popular no final dos anos 1990 foi uma arquitetura
 ARQUITETURAS MONOLÍTICAS VERSUS DISTRIBUÍDAS
 Monolíto - sistema onde todas as funcionalidades estão em uma única base de código centralizado
 
-Log distribuído
+LOG DISTRIBUÍDO
+Um log distribuído é um registro de eventos ou mensagens mantido de forma consistente entre vários nós (máquinas) em um sistema distribuído. Ele funciona como uma sequência ordenada e imutável de registros que todos os participantes conseguem ler e seguir na mesma ordem.
 
-Transações distribuídas
+TRANSAÇÕES DISTRIBUIDAS
+Garante que todas as partes envolvidas em uma operação completem com sucesso ou todas sejam revertidas.
 
 ------------------------------------------------------------------------------- 20/10/2025 - 2ª BIMESTRE --------------------------------------------------------------------------------------------
 
- A maioria das arquiteturas em camadas consiste em quatro camadas padrão: apresentação, comercial, persistência e banco de dados,
+A arquitetura em camadas é um dos estilos mais comuns no desenvolvimento de software devido à sua simplicidade, familiaridade e baixo custo. Ela organiza o sistema em níveis, cada um com responsabilidades específicas, normalmente divididos em apresentação, negócios, persistência e banco de dados. Esse formato reflete naturalmente a estrutura de muitas organizações, o que contribui para sua adoção.
 
-resumo CAPÍTULO 10
-
-Estilo de Arquitetura em Camadas
+Há dois modelos de comunicação entre camadas: o estrito, em que cada camada só acessa a imediatamente inferior, e o relaxado, que permite saltos entre camadas, oferecendo flexibilidade, mas podendo aumentar o acoplamento. Entre suas vantagens estão a clareza organizacional, a separação de responsabilidades e a facilidade de testes. No entanto, ela pode se tornar rígida, dificultar escalabilidade independente e não se encaixar bem em arquiteturas distribuídas ou orientadas a eventos. É mais adequada para sistemas tradicionais de CRUD e aplicações corporativas, mas menos indicada para cenários modernos que exigem reatividade e alta flexibilidade.
 
 ------------------------------------------------------------------------------- 27/10/2025 - 2ª BIMESTRE --------------------------------------------------------------------------------------------
 
-pipeline
-
-
-
+PIPELINE
+É uma sequência de etapas organizadas, onde cada etapa recebe uma entrada, processa algo e entrega a saída para a próxima etapa. É como uma “linha de montagem”, em que cada fase executa uma parte do trabalho até completar o resultado final. O mesmo é ideal para processamento contínuo, transformações em fluxo e tarefas que podem ser divididas em passos claros. Ele promove baixo acoplamento, alta coesão e reutilização de componentes.
 
 ------------------------------------------------------------------------------- 03/11/2025 - 2ª BIMESTRE --------------------------------------------------------------------------------------------
 
-
-Resumir capitulo 12
-Estilo de Arquitetura Microkernel
-
+ARQUITETURA MICROKERNEL
+A arquitetura Microkernel divide o sistema em um núcleo mínimo, que contém apenas as funções essenciais, e um conjunto de plugins, que adicionam ou estendem funcionalidades. O núcleo é estável e simples, os plugins são modulares, podem ser trocados e evoluem sem afetar o restante do sistema. Esse estilo é ideal para plataformas extensíveis, como IDEs e sistemas que precisam de personalização constante.
 
 
 
