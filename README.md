@@ -442,11 +442,14 @@ PIPELINE
 ARQUITETURA MICROKERNEL
 A arquitetura Microkernel divide o sistema em um núcleo mínimo, que contém apenas as funções essenciais, e um conjunto de plugins, que adicionam ou estendem funcionalidades. O núcleo é estável e simples, os plugins são modulares, podem ser trocados e evoluem sem afetar o restante do sistema. Esse estilo é ideal para plataformas extensíveis, como IDEs e sistemas que precisam de personalização constante.
 
-Dia 10/11/2025
-Arquitetura 
-Micro serviço
+------------------------------------------------------------------------------- 10/11/2025 - 2ª BIMESTRE --------------------------------------------------------------------------------------------
 
+ARQUITETURA DE MICROSSERVIÇOS
+É um estilo no qual um sistema é dividido em serviços pequenos, independentes e implantáveis de forma autônoma. Cada microsserviço implementa uma função de negócio específica, possui seu próprio banco de dados e se comunica com outros por meio de APIs.
 
+Permite entregas contínuas, escalabilidade independente e maior autonomia das equipes. Reduzindo o acoplamento entre partes do sistema.
+
+Muito utilizado quando o sistema é grande e tende a crescer mais. A arquitetura de microsserviços vai estrangulando a funcionalidade do sistema antigo.
 
 
 
